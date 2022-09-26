@@ -23,12 +23,119 @@ function restartGame() {
     document.getElementById('score').textContent = 'Player X Turn';
 }
 
+
+// Swith between players and check the score to determine if there is a winner after each play
 function changePlayer() {
     if (document.getElementById('score').textContent == 'Player X Turn') {
         document.getElementById('score').textContent = 'Player O Turn';
+        
     }
     else {
         document.getElementById('score').textContent = 'Player X Turn';
+        
+    }
+    checkScore();
+}
+
+function checkScore () {
+
+    // 8 scenarios where X can be the winner
+
+    if (document.getElementById('grid1').textContent == 'X' && document.getElementById('grid2').textContent == 'X' && document.getElementById('grid3').textContent == 'X') {
+        document.getElementById('score').textContent = 'Player X Wins!';
+        return;
+    }
+    
+    if (document.getElementById('grid4').textContent == 'X' && document.getElementById('grid5').textContent == 'X' && document.getElementById('grid6').textContent == 'X') {
+        document.getElementById('score').textContent = 'Player X Wins!';
+        return;
+    }
+    
+    if (document.getElementById('grid7').textContent == 'X' && document.getElementById('grid8').textContent == 'X' && document.getElementById('grid9').textContent == 'X') {
+        document.getElementById('score').textContent = 'Player X Wins!';
+        return;
+    }
+
+    if (document.getElementById('grid1').textContent == 'X' && document.getElementById('grid4').textContent == 'X' && document.getElementById('grid7').textContent == 'X') {
+        document.getElementById('score').textContent = 'Player X Wins!';
+        return;
+    }
+
+    if (document.getElementById('grid2').textContent == 'X' && document.getElementById('grid5').textContent == 'X' && document.getElementById('grid8').textContent == 'X') {
+        document.getElementById('score').textContent = 'Player X Wins!';
+        return;
+    }
+
+    if (document.getElementById('grid3').textContent == 'X' && document.getElementById('grid6').textContent == 'X' && document.getElementById('grid9').textContent == 'X') {
+        document.getElementById('score').textContent = 'Player X Wins!';
+        return;
+    }
+
+    if (document.getElementById('grid1').textContent == 'X' && document.getElementById('grid5').textContent == 'X' && document.getElementById('grid9').textContent == 'X') {
+        document.getElementById('score').textContent = 'Player X Wins!';
+        return;
+    }
+
+    if (document.getElementById('grid3').textContent == 'X' && document.getElementById('grid5').textContent == 'X' && document.getElementById('grid7').textContent == 'X') {
+        document.getElementById('score').textContent = 'Player X Wins!';
+        return;
+    }
+
+
+    // 8 scenarios where O can be the winner
+
+
+    if (document.getElementById('grid1').textContent == 'O' && document.getElementById('grid2').textContent == 'O' && document.getElementById('grid3').textContent == 'O') {
+        document.getElementById('score').textContent = 'Player O Wins!';
+        return;
+    }
+    
+    if (document.getElementById('grid4').textContent == 'O' && document.getElementById('grid5').textContent == 'O' && document.getElementById('grid6').textContent == 'O') {
+        document.getElementById('score').textContent = 'Player O Wins!';
+        return;
+    }
+    
+    if (document.getElementById('grid7').textContent == 'O' && document.getElementById('grid8').textContent == 'O' && document.getElementById('grid9').textContent == 'O') {
+        document.getElementById('score').textContent = 'Player O Wins!';
+        return;
+    }
+
+    if (document.getElementById('grid1').textContent == 'O' && document.getElementById('grid4').textContent == 'O' && document.getElementById('grid7').textContent == 'O') {
+        document.getElementById('score').textContent = 'Player O Wins!';
+        return;
+    }
+
+    if (document.getElementById('grid2').textContent == 'O' && document.getElementById('grid5').textContent == 'O' && document.getElementById('grid8').textContent == 'O') {
+        document.getElementById('score').textContent = 'Player O Wins!';
+        return;
+    }
+
+    if (document.getElementById('grid3').textContent == 'O' && document.getElementById('grid6').textContent == 'O' && document.getElementById('grid9').textContent == 'O') {
+        document.getElementById('score').textContent = 'Player O Wins!';
+        return;
+    }
+
+    if (document.getElementById('grid1').textContent == 'O' && document.getElementById('grid5').textContent == 'O' && document.getElementById('grid9').textContent == 'O') {
+        document.getElementById('score').textContent = 'Player O Wins!';
+        return;
+    }
+
+    if (document.getElementById('grid3').textContent == 'O' && document.getElementById('grid5').textContent == 'O' && document.getElementById('grid7').textContent == 'O') {
+        document.getElementById('score').textContent = 'Player O Wins!';
+        return;
+    }
+
+    if (document.getElementById('grid1').textContent != '' && document.getElementById('grid2').textContent != '' 
+    && document.getElementById('grid3').textContent != '' && document.getElementById('grid4').textContent != '' 
+    && document.getElementById('grid5').textContent != '' && document.getElementById('grid6').textContent != '' 
+    && document.getElementById('grid7').textContent != '' && document.getElementById('grid8').textContent != ''
+    && document.getElementById('grid9').textContent != '') {
+        document.getElementById('score').textContent = 'It\'s a tie!'
+    }
+
+
+    else {
+        console.log('no winner yet');
     }
 }
 
