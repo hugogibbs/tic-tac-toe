@@ -148,6 +148,7 @@ function checkScore () {
     && document.getElementById('grid7').textContent != '' && document.getElementById('grid8').textContent != ''
     && document.getElementById('grid9').textContent != '') {
         document.getElementById('score').textContent = 'It\'s a tie!'
+        document.getElementById('restartButton').textContent = 'PLAY AGAIN'
     }
 
     else {
