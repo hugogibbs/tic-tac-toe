@@ -38,7 +38,7 @@ grid-template-columns: repeat(3, 120px);
 grid-template-rows: repeat(3, 120px);
 align-items: center;
 justify-content: center;
-padding-top: 100px; 
+padding-top: 20px; 
 text-align: center;
 }
 
@@ -68,4 +68,35 @@ button.grid1, button.grid2, button.grid3, button.grid4, button.grid5, button.gri
 button.grid1:hover, button.grid2:hover, button.grid3:hover, button.grid4:hover, button.grid5:hover, button.grid6:hover, button.grid7:hover, button.grid8:hover, button.grid9:hover {
     background-color: coral;
 
+}
+
+.score {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 50px;
+
+}
+
+.restart {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+button.restartButton {
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button.restartButton:hover {
+    background-color: #3882f6;
 }
