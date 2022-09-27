@@ -24,7 +24,6 @@ function restartGame() {
     document.getElementById('restartButton').textContent = 'RESTART';
 }
 
-
 // Swith between players and check the score to determine if there is a winner after each play
 function changePlayer() {
     if (document.getElementById('score').textContent == 'Player X Turn') {
