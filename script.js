@@ -6,7 +6,6 @@ restartButton.id = 'restartButton';
 restartButton.textContent = 'RESTART';
 restart.appendChild(restartButton);
 
-
 // clean all grid elements when restarting the game and set the score for player X turn
 document.getElementById('restart').addEventListener('click', restartGame)
 
